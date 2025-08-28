@@ -30,4 +30,4 @@
 ## 🚀 使用方法
 1. 克隆本项目：
    ```bash
-   git clone https://github.com/ychew247/熵动协议.git
+   git clone https://github.com/ychew247/-.git
