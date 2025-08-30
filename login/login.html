@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>熵变协议</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="login-container">
+        <h1 class="login-title">欢迎回来</h1>
+        <p class="login-subtitle">登录您的账户继续游戏</p>
+        
+        <form id="authForm">
+            <div class="form-group">
+                <label for="username" class="form-label">用户名</label>
+                <input type="text" id="username" name="username" class="form-input" placeholder="输入您的用户名" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="password" class="form-label">密码</label>
+                <input type="password" id="password" name="password" class="form-input" placeholder="输入您的密码" required>
+            </div>
+            
+            <div class="form-group" id="confirmPasswordGroup" style="display: none;">
+                <label for="confirmPassword" class="form-label">确认密码</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" class="form-input" placeholder="确认您的密码" required>
+            </div>
+            
+            <button type="submit" class="auth-btn" id="authBtn">登录</button>
+        </form>
+        
+        <div class="switch-section">
+            <p class="switch-text" id="switchText">还没有账户？</p>
+            <a href="#" class="switch-link" id="switchLink">在这里注册</a>
+        </div>
+    </div>
+
+    <script src="login.js"></script>
+</body>
+</html>

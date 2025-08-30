@@ -1,0 +1,232 @@
+/* 标准化样式 - 与其他页面保持一致 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+    background: url('../pictures/login_page.png') no-repeat center center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #333;
+    overflow-x: hidden;
+}
+
+.save-container {
+    width: 90%;
+    max-width: 1000px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 10;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.page-title {
+    color: #769bc1;
+    font-size: 28px;
+    font-weight: 600;
+    margin: 0;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.back-btn {
+    background: linear-gradient(135deg, #40e0d0 0%, #20b2aa 50%, #008b8b 100%);
+    border: none;
+    border-radius: 8px;
+    color: white;
+    padding: 14px 24px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.back-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(64, 224, 208, 0.4);
+    background: linear-gradient(135deg, #48e8d8 0%, #28c2b8 50%, #108a8a 100%);
+}
+
+.save-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.save-item {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 15px;
+    padding: 25px 20px;
+    text-align: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 10;
+}
+
+.save-item:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(64, 224, 208, 0.4);
+    border-color: rgba(64, 224, 208, 0.5);
+}
+
+.save-icon {
+    font-size: 48px;
+    margin-bottom: 15px;
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
+}
+
+.save-item:hover .save-icon {
+    filter: grayscale(0%);
+}
+
+.save-name {
+    color: #40e0d0;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.save-info {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 8px;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.save-date {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 12px;
+    font-weight: 400;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* 有存档数据的样式 */
+.save-item.has-data {
+    background: rgba(64, 224, 208, 0.2);
+    border-color: rgba(64, 224, 208, 0.4);
+}
+
+.save-item.has-data .save-icon {
+    filter: grayscale(0%);
+}
+
+.save-item.has-data .save-info {
+    color: #40e0d0;
+    font-weight: 500;
+}
+
+.save-item.has-data .save-date {
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 500;
+}
+
+/* 空存档位的样式 */
+.save-item.empty .save-icon {
+    opacity: 0.5;
+}
+
+.save-item.empty .save-info {
+    color: rgba(255, 255, 255, 0.5);
+    font-style: italic;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .save-container {
+        width: 95%;
+        padding: 30px 20px;
+    }
+    
+    .page-title {
+        font-size: 24px;
+    }
+    
+    .back-btn {
+        padding: 12px 20px;
+        font-size: 15px;
+    }
+    
+    .save-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 15px;
+    }
+    
+    .save-item {
+        padding: 20px 15px;
+    }
+    
+    .save-icon {
+        font-size: 36px;
+    }
+    
+    .save-name {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .save-container {
+        width: 95%;
+        padding: 20px 15px;
+    }
+    
+    .header {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+    
+    .page-title {
+        font-size: 22px;
+    }
+    
+    .save-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .save-item {
+        padding: 20px 15px;
+    }
+    
+    .save-icon {
+        font-size: 32px;
+    }
+    
+    .save-name {
+        font-size: 16px;
+    }
+    
+    .save-info {
+        font-size: 13px;
+    }
+    
+    .save-date {
+        font-size: 11px;
+    }
+}

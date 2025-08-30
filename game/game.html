@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>熵变协议 - 主菜单</title>
+    <link rel="stylesheet" href="game.css">
+</head>
+<body>
+    <!-- User Info Bar -->
+    <div class="user-bar">
+        <div class="user-info">
+            <span class="welcome-text">欢迎回来，<span id="currentUserName"></span></span>
+        </div>
+        <button class="logout-btn" id="logoutBtn">登出</button>
+    </div>
+
+    <!-- Main Menu Container -->
+    <div class="main-menu-container">
+        <div class="menu-wrapper">
+            <h1 class="game-title">熵变协议</h1>
+            <p class="game-subtitle">选择你的冒险之路</p>
+            
+            <div class="menu-grid">
+                <div class="menu-item" id="newGame">
+                    <div class="menu-icon">🎮</div>
+                    <h3>新游戏</h3>
+                    <p>开始全新的冒险旅程</p>
+                </div>
+                
+                <div class="menu-item" id="achievements">
+                    <div class="menu-icon">🏆</div>
+                    <h3>成就</h3>
+                    <p>查看你的游戏成就</p>
+                </div>
+                
+                <div class="menu-item" id="loadGame">
+                    <div class="menu-icon">💾</div>
+                    <h3>读取存档</h3>
+                    <p>继续之前的游戏进度</p>
+                </div>
+                
+                <div class="menu-item" id="aboutUs">
+                    <div class="menu-icon">ℹ️</div>
+                    <h3>关于我们</h3>
+                    <p>了解游戏开发团队</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./game.js"></script>
+</body>
+</html>
